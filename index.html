@@ -1,3 +1,312 @@
 <head>
       <title>My Personal Portfolio</title>
 </head>
+
+<body>
+
+      <div class="page-layout">
+            <div class="head-title">
+                  <div class="head-title-1">From Bytes to Brilliance: My Personal Career Portfolio</div>
+                  <div class="head-title-2">MATTHEW SHELBY</div>
+                  <div class="head-title-3" onclick="showTypeTextAgain()">Blockchain Developer</div>
+            </div>
+            <br>
+            <div>
+                  <div class="text-board" id="text-board">
+                        <div id="myElement"></div>
+                        <br>
+                        <div class="text-board-foot" onclick="dontShowTypeText()">
+                              <span> Close and Don't show this again.</span>
+                        </div>
+                  </div>
+            </div>
+
+            <br>
+
+            <div class="content-card-frame">
+                  <div class="content-card-body">
+                        <h1 class="content-card-head">The latest project I published:</h1>
+
+                        <div class="body-description">
+
+                              <table class="content-table">
+                                    <tr>
+                                          <td class="td-title">Title</td>
+                                          <td class="td-description">Crypto Swap MVP</td>
+                                    </tr>
+                                    <tr>
+                                          <td class="td-title">Short Description</td>
+                                          <td class="td-description">Cryptocurrency swap platform, Where user can swap
+                                                its own tokens with other tokens on the same blockchain.</td>
+                                    </tr>
+                                    <tr>
+                                          <td class="td-title">Project Duration</td>
+                                          <td class="td-description">29 Days.</td>
+                                    </tr>
+                                    <tr>
+                                          <td class="td-title">Technologies Used</td>
+
+                                          <td class="td-description img-row">
+                                                <img src="assets/images/logo/BSC.svg" alt="Binance Smart Chain"
+                                                      title="Binance Smart Chain">
+                                                <img src="assets/images/logo/Ethersjs.png" alt="Ethers.js"
+                                                      title="Ethers.js">
+                                                <img src="assets/images/logo/NET_Core_Logo.png" alt="ASP.NET Core 6"
+                                                      title="ASP.NET Core 6">
+                                                <img src="assets/images/logo/sql.webp" alt="Microsoft SQL Server"
+                                                      title="Microsoft SQL Server"
+                                                      style="border: #D9E3F4 1px solid;border-radius: 50%;">
+                                                <img src="assets/images/logo/node-js.svg" alt="NodeJS" title="NodeJS">
+                                                <img src="assets/images/logo/mongodb.svg" alt="MongoDB" title="MongoDB">
+                                                <img src="assets/images/logo/jquery.svg" alt="JQuery" title="JQuery">
+                                          </td>
+                                    </tr>
+                                    <tr style="padding-top: 1rem;">
+                                          <td class="td-title">Key Features</td>
+                                          <td class="td-description">
+                                                <ul>
+                                                      <li class="features-li"><b>Price Aggregation:</b> Utilized calling
+                                                            price aggregators
+                                                            to find
+                                                            the best price for optimal trading.
+                                                      </li>
+                                                      <li class="features-li"><b>Best Price Provider:</b> Integrated the
+                                                            best price provider
+                                                            available at the time to ensure accurate and competitive
+                                                            pricing.
+                                                      </li>
+                                                      <li class="features-li"><b>Liquidity Pool Swapping:</b> Enabled
+                                                            seamless swapping
+                                                            through
+                                                            major liquidity pools to enhance liquidity and trading
+                                                            flexibility.
+                                                      </li>
+                                                      <li class="features-li"><b> Secure Transaction Signing:</b>
+                                                            Implemented secure
+                                                            transaction
+                                                            signing, including approval and swap operations, locally
+                                                            using users' wallets for enhanced security.
+                                                      </li>
+                                                </ul>
+                                          </td>
+
+                                    </tr>
+                                    <tr>
+                                          <td class="td-title">Additional Information</td>
+                                          <td class="td-description"><a
+                                                      href="https://matthewshelby.github.io/swap/">Project Website</a> |
+                                                <a href="">Project
+                                                      Technical Details</a>| <a
+                                                      href="https://github.com/MatthewShelby/swap">GitHub Repository -
+                                                      UI</a>| <a
+                                                      href="https://github.com/MatthewShelby/swapServer">GitHub
+                                                      Repository - Backend</a>
+                                          </td>
+                                    </tr>
+                              </table>
+                        </div>
+
+                  </div>
+                  <div class="body-img">
+                        <img src="assets/images/swap1.png" alt="">
+                  </div>
+            </div>
+      </div>
+
+      <!-- #region SCRIPTS -->
+
+      <!-- JQuery. Not sure what would have I done if there was no JQuery!-->
+      <script src="https://code.jquery.com/jquery-3.7.0.js"
+            integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+      <!-- JQuery Cookie. -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"
+            integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+      <!-- The script itself, loaded AFTER your root element. -->
+      <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+
+      <script src="./assets/js/main.js"></script>
+
+
+      <script>
+            $(document).ready(() => {
+                  console.log('ready')
+                  chechShowTypeText()
+            })
+
+
+      </script>
+
+      <!-- #endregion -->
+
+</body>
+
+<style>
+      .features-li b {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #aaa0a0;
+      }
+
+      a {
+            color: dodgerblue;
+      }
+
+      .features-li {
+            padding: 0.5rem 0px;
+            line-height: 1.1rem;
+            margin-left: -15px;
+      }
+
+      .img-row img {
+            max-width: 8%;
+            object-fit: contain;
+            margin: 0px 4px;
+      }
+
+      .td-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding-bottom: 1rem;
+      }
+
+      .td-description {
+            font-weight: 300;
+            font-size: 1.1rem;
+            padding-bottom: 1rem;
+
+      }
+
+
+      .body-img img {
+            max-width: 100%;
+            border-radius: 4px;
+
+      }
+
+      .body-img {
+            max-width: 30%;
+            padding: 8rem 2rem;
+      }
+
+      .body-description {}
+
+      .content-table {
+            color: #ECECEC;
+      }
+
+      /* .content-table tr td {
+            padding-bottom: 1rem;
+            padding-right: 1rem;
+            font-size: 1.2rem;
+
+      } */
+
+      .content-card-frame {
+            background-color: #2a2a2a;
+            font-size: 1rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 1rem;
+            color: #ECECEC;
+            display: flex;
+            border-radius: 8px;
+
+      }
+
+      .content-card-head {
+            margin-top: 0px;
+            margin-bottom: 3.5rem;
+      }
+
+      .content-card-body {
+            margin-top: 0px;
+            max-width: 70%;
+      }
+
+
+      .text-board-foot span {
+            font-size: 1rem;
+            color: #2a2a2abb;
+            background-color: none;
+            border: none;
+            text-decoration: underline;
+            letter-spacing: -1px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 400;
+            cursor: pointer;
+      }
+
+      .text-board-foot {
+            justify-content: end;
+            display: flex;
+
+      }
+
+      @font-face {
+            font-family: 'octa';
+            src: url('assets/Font/Octa\ Brain\ Regular.ttf');
+            font-weight: normal;
+            font-style: normal;
+      }
+
+      .text-board {
+            font-size: 2rem;
+            font-weight: 300;
+            font-family: 'octa';
+            background-color: #2a2a2a44;
+            padding: 1.2rem;
+            padding-bottom: 0.6rem;
+            border-radius: 8px;
+            letter-spacing: 2px;
+            color: #ECECEC;
+            display: none;
+
+      }
+
+      .head-title-1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding-left: 5px;
+            margin-bottom: -10px;
+      }
+
+      .head-title-2 {
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: -20px;
+
+      }
+
+      .head-title-3 {
+            font-size: 2rem;
+            font-weight: 300;
+            padding-left: 5px;
+            letter-spacing: -2px;
+            margin-bottom: 0px;
+      }
+
+
+
+      .head-title {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #2a2a2a;
+            margin-bottom: 4rem;
+      }
+
+      .page-layout {
+            padding: 2rem;
+      }
+
+      body {
+            background-image: linear-gradient(90deg, #D9E3F4, #EEEEEE);
+            /* background-image: linear-gradient(90deg, #D9E3F4, #ECECEC); */
+            ;
+      }
+
+      ::-webkit-scrollbar {
+            display: none;
+      }
+</style>
