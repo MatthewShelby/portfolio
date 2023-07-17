@@ -576,15 +576,27 @@
             display: none;
       }
 
-      @media only screen and (max-device-width: 480px) {
+      @media only screen and (max-device-width: 915px) {
             .tst {
                   display: block;
                   font-size: 3rem;
             }
 
             .body-img {
-                  max-width: 100%;
+                  min-width: 100%;
+                  padding: 2rem 0rem;
+            }
+
+            .body-img img {
+                  min-width: 100%;
                   /* padding: 6rem 6rem; */
+            }
+
+            .visit-btn-img {
+                  vertical-align: middle;
+                  min-width: 26px !important;
+                  max-width: 26px !important;
+                  display: inline-flex;
             }
 
             .content-card-frame {
@@ -605,6 +617,39 @@
                   font-size: 2rem;
                   padding-bottom: 1rem;
                   line-height: 2.2rem;
+                  vertical-align: top;
+            }
+
+            ul {
+                  margin-block-start: 0px;
+            }
+
+            .td-description {
+                  font-weight: 100;
+                  font-size: 1.7rem;
+                  padding-bottom: 1rem;
+                  line-height: 2.2rem;
+                  font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .img-row img {
+                  max-width: 10%;
+            }
+
+            .features-li b {
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                  color: #a0a0a0;
+                  font-size: 1.7rem;
+                  padding-bottom: 1rem;
+                  line-height: 2.2rem;
+                  font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .features-li {
+                  line-height: 2.2rem;
+                  padding-bottom: 1rem;
+
             }
       }
 </style>
