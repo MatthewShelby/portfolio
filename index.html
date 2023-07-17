@@ -1,16 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
       <title>My Personal Portfolio</title>
+      <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/fav/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/fav/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/fav/favicon-16x16.png">
 </head>
 
 <body>
 
-      <div class="page-layout">
+      <div class="page-layout" id="pageLAyout">
             <div class="head-title">
                   <div class="head-title-1">From Bytes to Brilliance: My Personal Career Portfolio</div>
                   <div class="head-title-2">MATTHEW SHELBY</div>
                   <div class="head-title-3" onclick="showTypeTextAgain()">Blockchain Developer</div>
             </div>
             <br>
+            <div class="tst">
+                  The TEST mus be seen only on mobile
+            </div>
             <div>
                   <div class="text-board" id="text-board">
                         <div id="myElement"></div>
@@ -23,7 +32,7 @@
 
             <br>
 
-            <div class="content-card-frame">
+            <!-- <div class="content-card-frame">
                   <div class="content-card-body">
                         <h1 class="content-card-head">The latest project I published:</h1>
 
@@ -43,6 +52,7 @@
                                           <td class="td-title">Project Duration</td>
                                           <td class="td-description">29 Days.</td>
                                     </tr>
+
                                     <tr>
                                           <td class="td-title">Technologies Used</td>
 
@@ -53,11 +63,11 @@
                                                       title="Ethers.js">
                                                 <img src="assets/images/logo/NET_Core_Logo.png" alt="ASP.NET Core 6"
                                                       title="ASP.NET Core 6">
-                                                <img src="assets/images/logo/sql.webp" alt="Microsoft SQL Server"
-                                                      title="Microsoft SQL Server"
-                                                      style="border: #D9E3F4 1px solid;border-radius: 50%;">
+                                                <img src="assets/images/logo/sql.png" alt="Microsoft SQL Server"
+                                                      title="Microsoft SQL Server">
                                                 <img src="assets/images/logo/node-js.svg" alt="NodeJS" title="NodeJS">
                                                 <img src="assets/images/logo/mongodb.svg" alt="MongoDB" title="MongoDB">
+                                                <img src="assets/images/logo/github.png" alt="GitHub" title="GitHub">
                                                 <img src="assets/images/logo/jquery.svg" alt="JQuery" title="JQuery">
                                           </td>
                                     </tr>
@@ -93,12 +103,12 @@
                                     </tr>
                                     <tr>
                                           <td class="td-title">Additional Information</td>
-                                          <td class="td-description"><a
+                                          <td class="td-description"><a target="_blank"
                                                       href="https://matthewshelby.github.io/swap/">Project Website</a> |
-                                                <a href="">Project
-                                                      Technical Details</a>| <a
+                                                <a href="https://matthewshelby.github.io/swap22" target="_blank">Project
+                                                      Technical Details</a> | <a target="_blank"
                                                       href="https://github.com/MatthewShelby/swap">GitHub Repository -
-                                                      UI</a>| <a
+                                                      UI</a> | <a target="_blank"
                                                       href="https://github.com/MatthewShelby/swapServer">GitHub
                                                       Repository - Backend</a>
                                           </td>
@@ -109,11 +119,18 @@
                   </div>
                   <div class="body-img">
                         <img src="assets/images/swap1.png" alt="">
+                        <div class="visit-frame">
+                              <a class="visit-btn" href="https://matthewshelby.github.io/swap/" target="_blank">
+                                    Visit &nbsp;
+                                    <img class="visit-btn-img" src="assets/images/icon/outlink.svg" alt="">
+                              </a>
+                        </div>
                   </div>
-            </div>
+            </div> -->
       </div>
 
       <!-- #region SCRIPTS -->
+      <!-- #region SCRIPT Refrences -->
 
       <!-- JQuery. Not sure what would have I done if there was no JQuery!-->
       <script src="https://code.jquery.com/jquery-3.7.0.js"
@@ -128,14 +145,208 @@
       <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 
       <script src="./assets/js/main.js"></script>
+      <script src="./assets/js/schema.js"></script>
 
-
+      <!-- #endregion -->
       <script>
             $(document).ready(() => {
                   console.log('ready')
                   chechShowTypeText()
+                  WritePosts()
             })
 
+
+
+            function WritePosts() {
+                  var all = ''
+                  allProjects.forEach(element => {
+
+                        var techs = ''
+                        element.Technologies.forEach(elem => {
+                              techs += `<img src="assets/images/logo/${elem.fileName}" alt="${elem.title}" title="${elem.title}">`
+                        });
+
+
+                        var features = ''
+                        element.KeyFeatures.forEach(elem => {
+                              features += `<li class="features-li"><b>${elem.title}:</b> ${elem.Description}  </li>`
+                        });
+
+
+                        var infos = ''
+                        element.Additional.forEach(elem => {
+                              infos += `<a target="_blank" href="${elem.href}" title="${elem.title}">${elem.title}</a> | `
+                        });
+
+                        var post = `
+
+ <div class="content-card-frame" id="pr${element._id}">
+                  <div class="content-card-body">
+                        <h1 class="content-card-head">${element.Heading}:</h1>
+
+                        <div class="body-description">
+
+                              <table class="content-table">
+                                    <tr>
+                                          <td class="td-title">Title</td>
+                                          <td class="td-description">${element.Title}</td>
+                                    </tr>
+                                    <tr>
+                                          <td class="td-title">Short Description</td>
+                                          <td class="td-description">${element.ShortDescription}</td>
+                                    </tr>
+                                    <tr>
+                                          <td class="td-title">Project Duration</td>
+                                          <td class="td-description">${element.Duration}</td>
+                                    </tr>
+
+                                    <tr>
+                                          <td class="td-title">Technologies Used</td>
+
+                                          <td class="td-description img-row">
+                                                ${techs}
+                                          </td>
+                                    </tr>
+                                    <tr style="padding-top: 1rem;">
+                                          <td class="td-title">Key Features</td>
+                                          <td class="td-description">
+                                                <ul>
+                                                      ${features}
+                                                </ul>
+                                          </td>
+
+                                    </tr>
+                                    <tr>
+                                          <td class="td-title">Additional Information</td>
+                                          <td class="td-description">
+                                               ${infos}
+                                          </td>
+                                    </tr>
+                              </table>
+                        </div>
+
+                  </div>
+                  <div class="body-img">
+                        <img src="assets/images/projectsImages/${element.Image}" alt="">
+                        <div class="visit-frame">
+                              <a class="visit-btn" href="${element.Additional[0].href}" target="_blank" title="Visit the Website">
+                                    Visit &nbsp;
+                                    <img class="visit-btn-img" src="assets/images/icon/outlink.svg" alt="">
+                              </a>
+                        </div>
+                  </div>
+            </div>
+
+
+`
+
+                        all += post
+                  });
+                  $('#pageLAyout').append(all);
+                  var end = `<div class="end">
+                  <p>*More projects from my portfolio will be added soon, including previous works not featured here.
+                        Stay tuned for updates!</p>
+                  </div>`
+                  $('#pageLAyout').append(end);
+            }
+
+
+            latest = new Project(
+                  '01',
+                  'The latest project I published',
+                  'Crypto Swap MVP',
+                  'Cryptocurrency swap platform, Where user can swap its own tokens with other tokens on the same blockchain.',
+                  '29 Days.',
+                  [
+                        new Technology('Binance Smart Chain', 'BSC.svg'),
+                        new Technology('Ethers.js', 'Ethersjs.png'),
+                        new Technology('ASP.NET Core 6', 'NET_Core_Logo.png'),
+                        new Technology('Microsoft SQL Server', 'sql.png'),
+                        new Technology('NodeJS', 'node-js.svg'),
+                        new Technology('MongoDB', 'mongodb.svg'),
+                        new Technology('GitHub', 'github.png'),
+                        new Technology('JQuery', 'jquery.svg'),
+                  ],
+                  [
+                        new Feature('Price Aggregation', 'Utilized calling price aggregators to find the best price for optimal trading.'),
+                        new Feature('Best Price Provider', 'Integrated the best price provider available at the time to ensure accurate and competitive pricing.'),
+                        new Feature('Liquidity Pool Swapping', 'Enabled seamless swapping through major liquidity pools to enhance liquidity and trading flexibility.'),
+                        new Feature('Secure Transaction Signing', 'Implemented secure transaction signing, including approval and swap operations, locally using users\' wallets for enhanced security.')
+                  ],
+                  [
+                        new Info('Project Website', 'https://matthewshelby.github.io/swap/'),
+                        new Info('Project Technical Details', '#'),
+                        new Info('GitHub Repository - UI', 'https://github.com/MatthewShelby/swap'),
+                        new Info('GitHub Repository - Backend', 'https://github.com/MatthewShelby/swapServer')
+                  ],
+                  'swap1.png'
+
+
+
+            )
+            Decuple = new Project(
+                  '02',
+                  'The Decuple NFT project I Developed in the Lenzolab',
+                  'Decuple NFT',
+                  'Decuple is a "Hold to earn" NFT that is built on a "Proof of Ownwership" Protocol.',
+                  'Near 1 Year.',
+                  [
+                        new Technology('Binance Smart Chain', 'BSC.svg'),
+                        new Technology('Solidity', 'sol.svg'),
+                        new Technology('Ethereum Virtual Machine', 'EVM.png'),
+                        new Technology('Ethers.js', 'Ethersjs.png'),
+                        new Technology('ASP.NET Core 6', 'NET_Core_Logo.png'),
+                        new Technology('Microsoft SQL Server', 'sql.png'),
+                        //new Technology('GitHub', 'github.png'),
+                        //new Technology('JQuery', 'jquery.svg'),
+                  ],
+                  [
+                        new Feature('Efficient Infrastructure', 'Optimized infrastructure using industry-standard protocols like ERC721, ERC20, and official standards for enhanced security, speed, and efficiency.'),
+                        new Feature('NFT Minting and Management', 'On Decuple, users can mint and manage NFTs from the Decuple NFT collections deployed on the Binance Smart Chain (BSC). The platform provides a seamless experience for users to create and handle their NFT assets.'),
+                        new Feature('Hybrid Structure', 'Utilized a hybrid on-chain/off-chain structure to ensure the highest level of security, while maintaining optimal speed and efficiency. This approach allows for enhanced scalability and reduces the strain on the blockchain network.'),
+                        new Feature('Low Gas Fee Marketplace', 'Integrated with popular low gas fee marketplaces like Opensea and Blur, enabling users to seamlessly buy, sell, and trade NFTs with minimal transaction costs.'),
+                        new Feature('Asset and Financial Management', ' Implemented a comprehensive system for users to manage their digital assets, financials, and access partner services. ')
+                  ],
+                  [
+                        new Info('Project Website', 'https://www.decuplenft.com'),
+                        new Info('Project Technical Details', '#'),
+                        new Info('GitHub Repository - Smart Contract', 'https://github.com/lenzolab/DecupleNFT-ERC721'),
+                  ],
+                  'Decuple1.png'
+            )
+            Blocki = new Project(
+                  '03',
+                  'Blocktop NFT, Excelled Development in the World of NFTs',
+                  'Blockitop NFT',
+                  'Blockitop is empowering early access to a play-to-earn online game through NFTs.',
+                  'Around 60 days.',
+                  [
+                        new Technology('Binance Smart Chain', 'BSC.svg'),
+                        new Technology('Solidity', 'sol.svg'),
+                        new Technology('Ethereum Virtual Machine', 'EVM.png'),
+                        new Technology('Ethers.js', 'Ethersjs.png'),
+                        new Technology('IPFS', 'ipfs.png'),
+                        // new Technology('ASP.NET Core 6', 'NET_Core_Logo.png'),
+                        // new Technology('Microsoft SQL Server', 'sql.png'),
+                        //new Technology('GitHub', 'github.png'),
+                        //new Technology('JQuery', 'jquery.svg'),
+                  ],
+                  [
+                        new Feature('ERC721 Standard', 'Leveraging the ERC721 standard, Blockitop enables seamless minting and management of assets within the project, providing users with ownership and control over their NFTs.'),
+                        new Feature('Opensea Compatibility', 'The Blockitop NFT collection is made available on Opensea, one of the leading NFT marketplaces, allowing users to easily buy, sell, and trade their NFTs'),
+                        new Feature('Web3 Integration', 'Blockitop seamlessly integrates with Web3 protocols, ensuring a fast and secure experience for users interacting with the project. This integration allows for efficient and reliable interactions with blockchain technology.'),
+                        new Feature('IPFS Integration', 'Blockitop utilizes IPFS (InterPlanetary File System) for permanent and immutable storage of NFT-related data. '),
+                  ],
+                  [
+                        new Info('Project Website', 'https://blocki.top'),
+                        new Info('Project Technical Details', '#'),
+                        new Info('GitHub Repository - Smart Contract', 'https://github.com/MatthewShelby/blockitop'),
+                  ],
+                  'blockitop.png'
+            )
+
+            console.log('latest.Title: ' + latest.Title)
+            var allProjects = [latest, Decuple, Blocki]
 
       </script>
 
@@ -144,11 +355,47 @@
 </body>
 
 <style>
+      .end {
+            font-family: Arial, Helvetica, sans-serif;
+
+      }
+
+      .visit-btn-img {
+            vertical-align: middle;
+            max-width: 26px !important;
+            display: inline-flex;
+      }
+
+      .visit-btn:hover {
+            border: #b9b9b9 3px solid;
+            background-color: #a9a9a922;
+            cursor: pointer;
+
+      }
+
+      .visit-btn {
+            padding: 0.6rem 1rem 0.8rem 1rem;
+            border: #a0a0a0 3px solid;
+            border-radius: 6px;
+            background-color: #2a2a2a00;
+            color: #a0a0a0;
+            font-size: 1.4rem;
+            font-weight: 400;
+            text-decoration: none;
+      }
+
+      .visit-frame {
+            padding: 3rem;
+            text-align: center;
+            align-content: center;
+            align-items: center;
+      }
+
       .features-li b {
             font-size: 1.1rem;
             font-weight: 600;
             letter-spacing: 1px;
-            color: #aaa0a0;
+            color: #a0a0a0;
       }
 
       a {
@@ -156,27 +403,45 @@
       }
 
       .features-li {
-            padding: 0.5rem 0px;
-            line-height: 1.1rem;
+            padding: 0.3rem 0px;
+            line-height: 1.5rem;
             margin-left: -15px;
       }
 
+      .img-row img:hover {
+            max-width: 9%;
+            margin: 1px 4px;
+
+
+      }
+
+      .img-row {
+            height: 96px;
+      }
+
       .img-row img {
+
             max-width: 8%;
             object-fit: contain;
             margin: 0px 4px;
+            aspect-ratio: 1/1;
+            vertical-align: top;
       }
 
       .td-title {
             font-weight: 600;
             font-size: 1.1rem;
             padding-bottom: 1rem;
+            line-height: 1.5rem;
+
       }
 
       .td-description {
             font-weight: 300;
             font-size: 1.1rem;
             padding-bottom: 1rem;
+            line-height: 1.5rem;
+
 
       }
 
@@ -192,18 +457,18 @@
             padding: 8rem 2rem;
       }
 
+      .tst {
+            display: none;
+      }
+
+
+
       .body-description {}
 
       .content-table {
             color: #ECECEC;
       }
 
-      /* .content-table tr td {
-            padding-bottom: 1rem;
-            padding-right: 1rem;
-            font-size: 1.2rem;
-
-      } */
 
       .content-card-frame {
             background-color: #2a2a2a;
@@ -213,6 +478,7 @@
             color: #ECECEC;
             display: flex;
             border-radius: 8px;
+            margin-top: 3rem;
 
       }
 
@@ -309,4 +575,38 @@
       ::-webkit-scrollbar {
             display: none;
       }
+
+      @media only screen and (max-device-width: 480px) {
+            .tst {
+                  display: block;
+                  font-size: 3rem;
+            }
+
+            .body-img {
+                  max-width: 100%;
+                  /* padding: 6rem 6rem; */
+            }
+
+            .content-card-frame {
+                  display: block;
+            }
+
+            .content-card-body {
+                  margin-top: 0px;
+                  max-width: 100%;
+            }
+
+            .content-card-frame {
+                  padding: 4rem;
+            }
+
+            .td-title {
+                  font-weight: 400;
+                  font-size: 2rem;
+                  padding-bottom: 1rem;
+                  line-height: 2.2rem;
+            }
+      }
 </style>
+
+</html>
