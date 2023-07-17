@@ -1,0 +1,5 @@
+Add Like Disklike Buttons.
+Add Contact info section.
+Add The Detail Explaination Page.
+Add download PDF versions (Full and Brief)
+Add editor page
