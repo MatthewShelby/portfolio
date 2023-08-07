@@ -35,11 +35,11 @@
                         }
                   </style>
                   <!-- About me -->
-                  <div class="general-info-card   ">
-                        <div class="contact-row flex">
+                  <div class="general-info-card-long   ">
+                        <div class="contact-row-long flex">
                               <div class="About-me">
                                     <h2>About Me</h2>
-                                    <p>Innovative and results-driven software developer passionate
+                                    <!-- <p>Innovative and results-driven software developer passionate
                                           about blockchain
                                           technologies, Web3, and web development.
                                           Skilled in creating scalable solutions and leveraging industry trends to
@@ -50,8 +50,35 @@
                                           to deliver innovative and efficient
                                           solutions. Seeking opportunities to contribute my expertise and join a
                                           professional team where I can make a meaningful
-                                          impact and foster innovation.</p>
-
+                                          impact and foster innovation.</p> -->
+                                    <p>Hi there, I'm Matthew Shelby. Welcome to my profile! 🌟
+                                    </p>
+                                    <p>
+                                          🚀 I'm a self-taught results-driven software developer passionate about
+                                          blockchain technologies, Web3, and web
+                                          development., Web3, and web development. Skilled in creating scalable
+                                          solutions and leveraging industry trends to
+                                          deliver high-quality projects. Adept at collaborating with cross-functional
+                                          teams to tackle complex problems and drive
+                                          impactful outcomes. Committed to continuous learning and staying at the
+                                          forefront of technological advancements to
+                                          deliver innovative and efficient solutions. Seeking opportunities to
+                                          contribute my expertise and join a professional
+                                          team where I can make a meaningful impact and foster innovation.
+                                    </p>
+                                    <p>
+                                          💡 With a thirst for knowledge, I'm always exploring the latest trends in
+                                          technology and science to enhance my skill set
+                                          and stay at the cutting edge of development.
+                                    </p>
+                                    <p>
+                                          💻 I'm dedicated to crafting high-quality, well-designed applications that
+                                          meet the needs of users and clients. Solving
+                                          complex problems and finding creative solutions are at the core of my work.
+                                    </p>
+                                    <p>
+                                          🌐 Let's connect and explore the endless possibilities of technology together!
+                                    </p>
                               </div>
                               <div class="img-frm">
                                     <img src="./assets/images/logo/MS.png" alt="">
@@ -83,7 +110,7 @@
 
                         <div class="contact-row flex">
                               <div class="contact-logo">
-                                    <a href="ttps://t.me/Mt_shby" target="_blank">
+                                    <a href="https://t.me/Mt_shby" target="_blank">
                                           <img src="assets/images/logo/telegram.svg" alt="Telegram"></a>
                               </div>
                               <div class="contact-content">
@@ -136,7 +163,7 @@
                   </div>
             </div>
 
-            <div>
+            <div class="margin-top-1rem">
                   <div class="text-board" id="text-board">
                         <div id="myElement"></div>
                         <br>
@@ -345,7 +372,7 @@
                   new Skill('Ethers', 5, 'Tech'),
                   new Skill('Blockchain', 5, 'Tech'),
                   new Skill('ERC-20 - 721 - 1155', 5, 'Tech'),
-                  new Skill('HD wallet & Ledgers', 4, 'Tech'),
+                  new Skill('HD wallet & Ledgers', 5, 'Tech'),
                   new Skill('JavaScript', 5, 'Tech'),
                   new Skill('UX Development', 5, 'Tech'),
                   new Skill('API, Blockchain Integration', 5, 'Tech'),
@@ -354,7 +381,7 @@
                   new Skill('System Architecture', 5, 'Tech'),
                   new Skill('NodeJS Server', 4, 'Tech'),
                   new Skill('No-SQL DBMS', 4, 'Tech'),
-                  new Skill('Git', 5, 'Tech'),
+                  new Skill('Git', 4, 'Tech'),
                   new Skill('Development Life Cycle', 3, 'Tech'),
                   new Skill('Figma', 3, 'Tech'),
 
@@ -364,7 +391,7 @@
                   new Skill('Result-Driven', 5, 'Soft'),
                   new Skill('Communication', 4, 'Soft'),
                   new Skill('Documentation', 4, 'Soft'),
-                  new Skill('Organizatiton', 4, 'Soft'),
+                  new Skill('Organization', 4, 'Soft'),
                   new Skill('Teamwork & Collaboration', 4, 'Soft'),
                   new Skill('Team Management', 3, 'Soft'),
 
@@ -818,9 +845,9 @@
             background-image: linear-gradient(90deg, #D9E3F4, #EEEEEE);
       }
 
-      body::-webkit-scrollbar {
+      /* body::-webkit-scrollbar {
             display: none;
-      }
+      } */
 
       @media only screen and (max-device-width: 915px) {
             .tst {
@@ -902,6 +929,7 @@
                   font-family: Arial, Helvetica, sans-serif;
                   font-size: 2.5rem;
             }
+
       }
 
 
@@ -910,6 +938,14 @@
       .contact-row {
             width: 100%;
             max-height: 150px;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.1rem;
+      }
+
+      .contact-row-long {
+            width: 100%;
+            /* max-height: 150px; */
             align-items: center;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 1.1rem;
@@ -931,6 +967,13 @@
             border-radius: 16px;
             background-color: #2a2a2a22;
             max-height: 150px;
+      }
+
+      .general-info-card-long {
+            padding: 2rem;
+            border-radius: 16px;
+            background-color: #2a2a2a22;
+            /* max-height: 150px; */
       }
 
       .contact-info {
@@ -1010,6 +1053,16 @@
 
       .scroll::-webkit-scrollbar {
             display: block !important;
+      }
+
+      .About-me {
+            line-height: 1.6rem;
+            padding-right: 5%;
+            letter-spacing: 1px;
+      }
+
+      .margin-top-1rem {
+            margin-top: 1rem;
       }
 </style>
 
