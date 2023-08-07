@@ -1,5 +1,8 @@
-Add Like Disklike Buttons.
+Add Like and dislike Buttons.
 Add Contact info section.
 Add The Detail Explaination Page.
 Add download PDF versions (Full and Brief)
 Add editor page
+Fix font size for Close and don't Show in mobile
+function showTypeTextAgain() Spell check
+Optimization of images

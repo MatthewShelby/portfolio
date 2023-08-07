@@ -32,3 +32,11 @@ class Info {
             this.href = href;
       }
 }
+
+class Skill {
+      constructor(title, rate, type) {
+            this.title = title;
+            this.rate = rate;
+            this.type = type;
+      }
+}
