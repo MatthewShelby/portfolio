@@ -26,17 +26,21 @@
       }
 
       .head-title-3 {
-            font-size: 6rem;
+            font-size: 4rem;
             font-weight: 300;
             padding-left: 5px;
             letter-spacing: -2px;
             margin-bottom: 0px;
       }
 
+      .download-btn {
+            font-size: 2rem;
+      }
+
       .About-me {
-            line-height: 1.6rem;
-            padding-right: 5%;
-            letter-spacing: 1px;
+            line-height: 2rem;
+            /* padding-right: 5%; */
+            letter-spacing: 2px;
       }
 
       .contact-row-long {
