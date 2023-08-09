@@ -81,4 +81,27 @@
       .img-frm img {
             width: 50%;
       }
+
+      .contact-info {
+            width: unset;
+            margin: 1rem 0px 3rem 0px;
+            font-size: 2rem;
+      }
+
+      .skill-info {
+            width: unset;
+            margin: 1rem 0px 1rem 0px;
+      }
+
+      .general-info {
+            /* padding: 1rem 0px; */
+            display: block;
+            width: unset;
+      }
+
+      .contact-row {
+            font-size: 1.5rem;
+      }
+
+
 }
