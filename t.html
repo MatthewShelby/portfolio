@@ -11,7 +11,63 @@
 </head>
 
 <body>
+      <style>
+            .med16 {
+                  display: none;
+            }
 
+            .med15 {
+                  display: none;
+            }
+
+            .med14 {
+                  display: none;
+            }
+
+            .med13 {
+                  display: none;
+            }
+
+            @media only screen and (max-device-width: 916px) {
+                  .med16 {
+                        display: block;
+                  }
+
+                  .med16h {
+                        display: none;
+                  }
+            }
+
+            @media only screen and (max-device-width: 915px) {
+                  .med15 {
+                        display: block;
+                  }
+
+                  .med15h {
+                        display: none;
+                  }
+            }
+
+            @media only screen and (max-device-width: 914px) {
+                  .med14 {
+                        display: block;
+                  }
+
+                  .med14h {
+                        display: none;
+                  }
+            }
+
+            @media only screen and (max-device-width: 913px) {
+                  .med13 {
+                        display: block;
+                  }
+
+                  .med13h {
+                        display: none;
+                  }
+            }
+      </style>
       <div class="page-layout" id="pageLAyout">
             <div class="head-title">
                   <div class="head-title-1 ">
@@ -40,7 +96,18 @@
                   </div>
             </div>
             <br>
+            <div>
+                  <div class="med16">med16</div>
+                  <div class="med16h">med16h</div>
+                  <div class="med15">med15</div>
+                  <div class="med15h">med15h</div>
+                  <div class="med14">med14</div>
+                  <div class="med14h">med14h</div>
+                  <div class="med13">med13</div>
+                  <div class="med13h">med13h</div>
+            </div>
 
+            <br>
             <!-- Phone about me -->
             <div class="general-info only-phone">
                   <!-- About me -->
@@ -261,6 +328,7 @@
 
       </div>
 
+      di
       <!-- #region SCRIPTS -->
       <!-- #region SCRIPT Refrences -->
 
