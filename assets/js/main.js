@@ -5,11 +5,11 @@ function dontShowTypeText() {
 
 function showTypeTextAgain() {
       $.cookie('dontShowText', "Yes")
-      chechShowTypeText()
+      checkShowTypeText()
 }
 
-function chechShowTypeText() {
-      console.log('chechShowTypeText')
+function checkShowTypeText() {
+      console.log('checkShowTypeText')
       var doShow = $.cookie('dontShowText')
       if (doShow != "No") {
             setTimeout(() => {
@@ -31,4 +31,16 @@ function showTypeText() {
             speed: 100,
             waitUntilVisible: true,
       }).pause(2000).go();
+}
+
+function toggleDiv(id) {
+      $('#des-' + id).toggle(1000);
+      $('html, body').animate({
+            scrollTop: $("#p-des-" + id).offset().top - 100
+      }, 600);
+
+      setTimeout(() => {
+            document.getElementById('intro-i-0').style.display = 'none'
+            document.getElementById('dots').style.display = 'none'
+      }, 200);
 }

@@ -1,8 +1,12 @@
 Add Like and dislike Buttons.
-Add Contact info section.
+Add Contact info section.     D
 Add The Detail Explaination Page.
-Add download PDF versions (Full and Brief)
+Add download PDF versions (Full and Brief)      Brief D
 Add editor page
-Fix font size for Close and don't Show in mobile
+Fix font size for Close and don't Show in mobile      D
 function showTypeTextAgain() Spell check
 Optimization of images
+
+
+
+D ==> Done
