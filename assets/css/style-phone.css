@@ -99,8 +99,31 @@
             width: unset;
       }
 
+
+      .phone-font-larger {
+            font-size: 2.2rem;
+      }
+
+      .phone-font-larger-2 {
+            font-size: 1.8rem;
+      }
+
+      .contact-logo img {
+            width: 36px;
+            margin-right: 1em;
+      }
+
       .contact-row {
+            margin-bottom: 1rem;
+            max-height: unset;
             font-size: 1.5rem;
       }
 
+      .general-info-card {
+            max-height: unset;
+      }
+
+      .text-board-foot span {
+            font-size: 2rem;
+      }
 }

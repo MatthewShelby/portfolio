@@ -404,11 +404,11 @@ body {
 
 @media only screen and (max-device-width: 915px) {
       .only-phone {
-            display: block;
+            display: unset;
       }
 
       .only-desktop {
-            display: none;
+            display: none !important;
       }
 }
 
