@@ -216,7 +216,8 @@ latest = new Project(
             new Info('Project Website', 'https://matthewshelby.github.io/swap/'),
             //new Info('Project Technical Details', '#'),
             new Info('GitHub Repository - UI', 'https://github.com/MatthewShelby/swap'),
-            new Info('GitHub Repository - Backend', 'https://github.com/MatthewShelby/swapServer')
+            new Info('GitHub Repository - Backend', 'https://github.com/MatthewShelby/swapServer'),
+            new Info('Read more on Medium', 'Introducing Swap: A Seamless Crypto Swapping Platform')
       ],
       'Swap.png'
 
@@ -280,6 +281,8 @@ Blocki = new Project(
             new Info('Project Website', 'https://blocki.top'),
             //new Info('Project Technical Details', '#'),
             new Info('GitHub Repository - Smart Contract', 'https://github.com/MatthewShelby/blockitop'),
+            new Info('More Details on Medium - UI', 'https://medium.com/@matthewshelby/exploring-blockitop-empowering-nft-enthusiasts-with-warriors-collection-477f69701d70'),
+            new Info('More Details on Medium - Server', 'https://medium.com/@matthewshelby/exploring-the-technological-foundation-a-deep-dive-into-the-technical-infrastructure-of-blockitop-663c527296d1'),
       ],
       'BlockitopOpt.png'
 )
@@ -317,6 +320,8 @@ BitWal = new Project(
             //new Info('Project Technical Details', '#'),
             new Info('GitHub Repository - UI', 'https://github.com/MatthewShelby/BitcoinWallet'),
             new Info('GitHub Repository - Server', 'https://github.com/MatthewShelby/BWServer'),
+            new Info('More Details on Medium - UI', 'https://medium.com/@matthewshelby/bitcoin-wallet-mvp-part-1-ui-f36b6770929f'),
+            new Info('More Details on Medium - Server', 'https://medium.com/@matthewshelby/bitcoin-wallet-mvp-part-2-server-ecae8bb5d673'),
       ],
       'BitcoinWallet.png'
 )
