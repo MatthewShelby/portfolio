@@ -217,7 +217,7 @@ latest = new Project(
             //new Info('Project Technical Details', '#'),
             new Info('GitHub Repository - UI', 'https://github.com/MatthewShelby/swap'),
             new Info('GitHub Repository - Backend', 'https://github.com/MatthewShelby/swapServer'),
-            new Info('Read more on Medium', 'Introducing Swap: A Seamless Crypto Swapping Platform')
+            new Info('Read more on Medium', 'https://medium.com/@matthewshelby/exploring-the-technological-foundation-a-deep-dive-into-the-technical-infrastructure-of-blockitop-663c527296d1')
       ],
       'Swap.png'
 
