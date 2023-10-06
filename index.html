@@ -33,13 +33,63 @@
                         <br class="only-phone">
                         <br class="only-phone">
                         <br class="only-phone">
-                        <a href="./MatthewShelby.pdf" target="_blank" class="download-btn"
+                        <a href="./MatthewShelby.pdf" target="_blank" class="download-btn wideer-padding"
                               title="Download a full version of this page as a PDF file.">
                               Download page as <span class="pdf">&nbsp;&nbsp; PDF &nbsp;&nbsp;</span>
+
                         </a>
                   </div>
             </div>
+            <div class="head-title">
 
+                  <br class="only-phone">
+                  <div class="head-title-3-frame ">
+                        <span class="only-desktop">&nbsp;</span>
+                        <button href="" onclick="tog()" class="download-btn hire-btn"
+                              title="See how you can have a sample of work.">
+                              Hire me for one <span class="pdf">&nbsp;&nbsp; Free &nbsp;&nbsp;</span> week. <img
+                                    src="assets/images/icon/chevron-down.svg" width="12" alt="" id="showbtnimage">
+                        </button>
+                  </div>
+            </div>
+
+            <div class="general-info  " id="hire-text">
+                  <div class="general-info-card-long   ">
+                        <div class="contact-row-long flex">
+                              <div class="About-me" i>
+                                    <h2>Hire Me</h2>
+
+                                    <p>I'll work on your project for one week, absolutely free. If you're happy with the
+                                          results, we can continue. If not,
+                                          there's no charge. Just send me an email at <a class="cta-mail"
+                                                href="mailto:matthewshelb@gmail.com"
+                                                target="_blank">MatthewShelB@gmail.com</a>
+                                    </p>
+
+                              </div>
+                              <div class="img-frm center">
+                                    <img width="200" src="./assets/images/logo/construction.png" alt="">
+                              </div>
+                        </div>
+
+
+                  </div>
+            </div>
+            <script>
+                  function tog() {
+                        $('#hire-text').toggle(1000);
+                        var src = $('#showbtnimage').attr("src"); console.log('src')
+                        console.log(src)
+                        if (src == 'assets/images/icon/chevron-down.svg') {
+
+                              $('#showbtnimage').attr("src", 'assets/images/Icon/chevron-up.svg')
+                        } else {
+                              $('#showbtnimage').attr("src", 'assets/images/Icon/chevron-down.svg')
+                        }
+                  }
+
+
+            </script>
 
             <br>
             <!-- Phone about me -->

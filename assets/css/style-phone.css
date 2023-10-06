@@ -37,6 +37,12 @@
             font-size: 2rem;
       }
 
+      .hire-btn {
+            font-size: 3rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 600;
+      }
+
       .About-me {
             line-height: 2rem;
             /* padding-right: 5%; */

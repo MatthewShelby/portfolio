@@ -44,3 +44,9 @@ function toggleDiv(id) {
             document.getElementById('dots').style.display = 'none'
       }, 200);
 }
+
+$(document).ready(() => {
+      if (screen.width < 916) {
+            $('#showbtnimage').attr('width', 30)
+      }
+})

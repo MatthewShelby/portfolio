@@ -244,7 +244,7 @@ a {
 .head-title {
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       color: #2a2a2a;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
 }
 
 .page-layout {
@@ -493,4 +493,24 @@ body {
             font-size: 2.5rem;
       }
 
+}
+
+#hire-text {
+      display: none;
+}
+
+.wideer-padding {
+      padding-left: 24px;
+      padding-right: 24px;
+}
+
+.cta-mail {
+      background-color: #6067aa22;
+      border: none;
+      border-radius: 6px;
+      padding: 6px;
+}
+
+.center {
+      justify-items: center;
 }
